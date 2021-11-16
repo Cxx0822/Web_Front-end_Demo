@@ -1,0 +1,23 @@
+"no-unused-vars": 0 去掉定义未使用的警告 
+
+Login.vue的样式修改
+username的验证
+
+更改为自己的后端接口：
+1.注释掉main.js中的mock
+2.更改.en.development中的url地址
+3.更改api中的url地址
+4.更改api中的parms/data
+
+后端增加logout接口
+
+layout->Navbar.vue更改用户头像
+
+request.js里面做了token处理
+
+后端接口
+// 值为null则不显示
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
+
+后端java 数据库字段不能带下划线！否则获取到的值为Null
+添加@JsonProperty("")注解解决！
