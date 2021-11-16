@@ -110,5 +110,11 @@ public class UserConfigController {
             }
         }
     }
+
+    @ApiOperation("退出登录")
+    @RequestMapping(value = "logout", method = RequestMethod.POST)
+    public R logout(){
+        return R.ok().message("退出成功");
+    }
 }
 

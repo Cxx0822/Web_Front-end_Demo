@@ -1,6 +1,7 @@
 package com.web.demo.service.controller;
 
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.web.demo.service.entity.UserInfo;
 import com.web.demo.service.mapper.UserInfoMapper;
