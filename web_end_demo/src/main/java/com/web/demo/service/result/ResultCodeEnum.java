@@ -13,7 +13,7 @@ public enum ResultCodeEnum {
     NullPointerException(false, 20001, "空对象错误"),
     SQLSyntaxErrorException(false, 20001, "SQL语法错误"),
     AlgorithmMismatchException(false, 20001, "token算法不一致错误"),
-    TokenExpiredException(false, 20001, "token过期错误"),
+    TokenExpiredException(false, 50014, "token过期错误"),
     SignatureVerificationException(false, 20001, "签名认证错误"),
     JWTDecodeException(false, 20001, "JWT解析错误");
 

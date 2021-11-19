@@ -6,6 +6,8 @@ import com.auth0.jwt.exceptions.SignatureVerificationException;
 import com.auth0.jwt.exceptions.TokenExpiredException;
 import com.web.demo.service.result.R;
 import com.web.demo.service.result.ResultCodeEnum;
+import com.web.demo.service.utils.ExceptionUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.sql.SQLSyntaxErrorException;
 
 @ControllerAdvice
+@Slf4j
 public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     @ResponseBody
@@ -25,6 +28,8 @@ public class GlobalExceptionHandler {
     @ResponseBody
     public R error(NullPointerException e) {
         // e.printStackTrace();
+        log.error("空对象错误");
+        // log.error(ExceptionUtil.getMessage(e));
         return R.setResult(ResultCodeEnum.NullPointerException);
     }
 
